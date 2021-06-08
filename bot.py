@@ -98,7 +98,7 @@ async def on_message(message):
 
 
     # Ik heb alle rode pillen die je wilde krijgen ---------------------------------------
-    y = random.randint(0, 4)
+    y = random.randint(0, 5)
     if message.content == "!redpill":
         print(date_time, ">redpill", message.guild.name, message.channel.name, y)
 
@@ -112,6 +112,8 @@ async def on_message(message):
             await message.channel.send("In de #multimedia staat genoeg om jezelf een hart mee onder de riem te steken in je vrije (geïnformeerde?) keuze.", reference=message.to_reference())   
         elif y == 4:            
             await message.channel.send("Veel plezier! :thumbsup::thumbsup:", file=discord.File(r'files/Industrial-Society-and-Its-Future-Theodore-Kaczynski.pdf'), reference=message.to_reference())    
+        elif y==5:
+            await message.channel.send(":person_facepalming::person_facepalming::person_facepalming: is dit een gecontroleerd experiment? Is dit een experiment? Is dit zuivere wetenschap? Is dit onkunde? Is dit nog ethisch te noemen? https://www.blacked.com/", reference=message.to_reference())
         return
 
     # Slimmerd commando ------------------------------------------------------------------
